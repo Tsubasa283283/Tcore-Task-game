@@ -1,51 +1,101 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>T-core 修行型タスク管理ゲーム</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299">
-  <style type="text/css">
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Trebuchet MS'; color: #eaeeff; -webkit-text-stroke: #eaeeff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Trebuchet MS'; color: #7d8ed6; -webkit-text-stroke: #7d8ed6; background-color: #0e101c}
-    p.p4 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px 'Hiragino Sans'; color: #a9b3e5; -webkit-text-stroke: #a9b3e5}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #eaeeff; -webkit-text-stroke: #eaeeff; background-color: #0d1024; min-height: 13.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #eaeeff; -webkit-text-stroke: #eaeeff; background-color: #0d1024}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Hiragino Sans'; color: #0c221a; -webkit-text-stroke: #0c221a; background-color: #43ce9c}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Hiragino Sans'; color: #eaeeff; -webkit-text-stroke: #eaeeff}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Trebuchet MS'; color: #eaeeff; -webkit-text-stroke: #eaeeff; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 11.0px 'Hiragino Mincho ProN'; font-kerning: none}
-    span.s3 {font: 11.0px Times; font-kerning: none}
-    span.s4 {font: 11.0px '.AppleJapaneseFont'; font-kerning: none}
-  </style>
+
+  <!-- ここ超重要：このCSSがUIを作ってる -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-<h1 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Trebuchet MS'; color: #eaeeff; -webkit-text-stroke: #eaeeff"><span class="s1"><b>T-core</b></span></h1>
-<p class="p2"><span class="s1"><<img src="assets/coach.png" alt="T-core Coach" style="width:250px;">></span></p>
-<p class="p3"><span class="s1">COACH</span></p>
-<p class="p4"><span class="s1">今日も積み上げよう。</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Hiragino Sans'; color: #eaeeff; -webkit-text-stroke: #eaeeff"><span class="s1"><b>タスク追加</b></span></h2>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s2">筋トレ</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s2">英語</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s2">勉強</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s2">仕事</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s2">思考</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s3">EASY</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s3">HARD</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s3">EXTREME</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p8"><span class="s4"><b>追加</b></span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Hiragino Sans'; color: #eaeeff; -webkit-text-stroke: #eaeeff"><span class="s1"><b>タスク一覧</b></span></h2>
-<p class="p8"><span class="s4"><b>月末ボス戦</b></span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Hiragino Sans'; color: #eaeeff; -webkit-text-stroke: #eaeeff"><span class="s1"><b>ステータス</b></span></h2>
-<p class="p9"><span class="s1">覚醒ゲージ</span></p>
-<p class="p10"><span class="s1"></span><br></p>
-<p class="p9"><span class="s1">闇ゲージ</span></p>
-<p class="p10"><span class="s1"></span><br></p>
-<p class="p4"><span class="s1">ボス戦の準備はできているか？</span></p>
+  <div class="app">
+    <!-- 左：COACH -->
+    <section class="panel">
+      <h1>T-core</h1>
+
+      <div id="coach-frame" class="coach-frame">
+        <!-- 画像を表示 -->
+        <img id="coach-image" src="assets/coach.png" alt="T-core Coach" />
+
+        <!-- 画像が読み込めない時の代替（保険） -->
+        <div id="coach-placeholder" class="coach-placeholder" style="display:none;">
+          COACH
+        </div>
+      </div>
+
+      <p id="coach-line" class="coach-line">まだ今日は完了報告がない。今すぐ1件終わらせよう。</p>
+    </section>
+
+    <!-- 中央：タスク -->
+    <section class="panel">
+      <h2>タスク追加</h2>
+
+      <form id="task-form" class="task-form">
+        <input id="task-title" type="text" placeholder="タイトル（必須）" required />
+
+        <select id="task-category">
+          <option value="筋トレ">筋トレ</option>
+          <option value="英語">英語</option>
+          <option value="勉強">勉強</option>
+          <option value="仕事">仕事</option>
+          <option value="思考">思考</option>
+        </select>
+
+        <select id="task-difficulty">
+          <option value="EASY">EASY</option>
+          <option value="HARD">HARD</option>
+          <option value="EXTREME">EXTREME</option>
+        </select>
+
+        <input id="task-due" type="date" />
+
+        <button type="submit">追加</button>
+        <button id="boss-btn" class="ghost" type="button">月末ボス戦</button>
+      </form>
+
+      <div class="list-head">
+        <h2 style="margin:0;">タスク一覧</h2>
+      </div>
+
+      <div id="empty-state" class="empty">タスクがありません。まず1つ追加しよう。</div>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <!-- 右：ステータス -->
+    <section class="panel">
+      <h2>ステータス</h2>
+
+      <dl class="stats-grid">
+        <dt>レベル</dt><dd id="stat-level">1</dd>
+        <dt>STR</dt><dd id="stat-str">0</dd>
+        <dt>INT</dt><dd id="stat-int">0</dd>
+        <dt>KNOWLEDGE</dt><dd id="stat-knowledge">0</dd>
+        <dt>SOCIAL</dt><dd id="stat-social">0</dd>
+        <dt>WISDOM</dt><dd id="stat-wisdom">0</dd>
+        <dt>DISCIPLINE</dt><dd id="stat-discipline">0</dd>
+        <dt>覚醒率</dt><dd id="stat-awake">0%</dd>
+        <dt>連続達成日数</dt><dd id="stat-streak">0日</dd>
+        <dt>連続未達成日数</dt><dd id="stat-streak-high">0日</dd>
+      </dl>
+
+      <div class="meter-wrap">
+        <div>覚醒ゲージ</div>
+        <div class="meter"><div id="awakening-fill" class="meter-fill awakening"></div></div>
+      </div>
+
+      <div class="meter-wrap">
+        <div>闇ゲージ</div>
+        <div class="meter"><div id="dark-fill" class="meter-fill dark"></div></div>
+      </div>
+
+      <div id="boss-result" class="boss-result">ボス戦の準備はできているか？</div>
+    </section>
+  </div>
+
+  <!-- JS（これがゲームを動かす） -->
+  <script src="app.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
