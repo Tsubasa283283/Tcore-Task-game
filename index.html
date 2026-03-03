@@ -17,13 +17,13 @@
 
         <div id="coach-frame" class="coach-frame">
           <img id="coach-image" src="./assets/coach.png" alt="T-core Coach" />
-          <div id="coach-placeholder" class="coach-placeholder" style="display:none;">
-            COACH
-          </div>
-          <div id="fall-badge" class="fall-badge" style="display:none;">FALL</div>
+          <div id="coach-placeholder" class="coach-placeholder" hidden>COACH</div>
+          <div id="fall-badge" class="fall-badge" hidden>FALL</div>
         </div>
 
-        <p id="coach-line" class="coach-line">まだ今日は完了報告がない。今すぐ1件終わらせよう。</p>
+        <p id="coach-line" class="coach-line">
+          まだ今日は完了報告がない。今すぐ1件終わらせよう。
+        </p>
       </section>
 
       <!-- 中央：タスク -->
@@ -32,6 +32,7 @@
 
         <form id="task-form" class="task-form">
           <input id="title" placeholder="タイトル（必須）" required />
+
           <select id="category">
             <option>筋トレ</option>
             <option>英語</option>
@@ -39,14 +40,24 @@
             <option>仕事</option>
             <option>思考</option>
           </select>
+
           <select id="difficulty">
             <option>EASY</option>
             <option>HARD</option>
             <option>EXTREME</option>
           </select>
-          <input id="due" type="date" />
-          <button type="submit">追加</button>
-          <button id="boss-btn" type="button" class="ghost">月末ボス戦</button>
+
+          <!-- app.js が見てるID -->
+          <input id="dueDate" type="date" />
+
+          <!-- app.js が見てるID -->
+          <button id="submit-btn" type="submit">追加</button>
+
+          <!-- app.js が見てるID -->
+          <button id="boss-battle" type="button" class="ghost">月末ボス戦</button>
+
+          <!-- app.js が見てるID（編集時に使う） -->
+          <button id="cancel-edit" type="button" class="ghost" hidden>キャンセル</button>
         </form>
 
         <div class="list-head">
@@ -54,37 +65,33 @@
         </div>
 
         <ul id="task-list" class="task-list"></ul>
-        <div id="empty" class="empty" style="display:none;">タスクがありません。まず1つ追加しよう。</div>
+        <div id="empty" class="empty" style="display:none;">
+          タスクがありません。まず1つ追加しよう。
+        </div>
       </main>
 
       <!-- 右：ステータス -->
       <aside class="panel">
         <h2>ステータス</h2>
 
-        <dl class="stats-grid">
-          <dt>レベル</dt><dd id="lv">1</dd>
-          <dt>STR</dt><dd id="str">0</dd>
-          <dt>INT</dt><dd id="int">0</dd>
-          <dt>KNOWLEDGE</dt><dd id="knowledge">0</dd>
-          <dt>SOCIAL</dt><dd id="social">0</dd>
-          <dt>WISDOM</dt><dd id="wisdom">0</dd>
-          <dt>DISCIPLINE</dt><dd id="discipline">0</dd>
-          <dt>覚醒率</dt><dd id="awakeRate">0%</dd>
-          <dt>連続達成日数</dt><dd id="streak">0日</dd>
-          <dt>連続未達成日数</dt><dd id="miss">0日</dd>
-        </dl>
+        <!-- app.js がここにHTMLを流し込む -->
+        <dl id="stats-grid" class="stats-grid"></dl>
 
         <div class="meter-wrap">
           <div>覚醒ゲージ</div>
-          <div class="meter"><div id="awakeBar" class="meter-fill awakening"></div></div>
+          <div class="meter">
+            <div id="awakening-bar" class="meter-fill awakening"></div>
+          </div>
         </div>
 
         <div class="meter-wrap">
           <div>闇ゲージ</div>
-          <div class="meter"><div id="darkBar" class="meter-fill dark"></div></div>
+          <div class="meter">
+            <div id="dark-bar" class="meter-fill dark"></div>
+          </div>
         </div>
 
-        <div id="bossResult" class="boss-result">ボス戦の準備はできているか？</div>
+        <div id="boss-result" class="boss-result">ボス戦の準備はできているか？</div>
       </aside>
     </div>
 
