@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-core 修行型タスク管理ゲーム</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <aside class="panel coach-panel">
+        <h1>T-core</h1>
+        <div class="coach-frame" id="coach-frame">
+          <img id="coach-image" src="assets/coach.png" alt="T-core coach" />
+          <div id="coach-placeholder" class="coach-placeholder" hidden>COACH</div>
+          <span id="fall-badge" class="fall-badge" hidden>堕落モード</span>
+        </div>
+        <p id="coach-line" class="coach-line">今日も積み上げよう。</p>
+      </aside>
+
+      <main class="panel task-panel">
+        <section>
+          <h2>タスク追加</h2>
+          <form id="task-form" class="task-form">
+            <input id="title" name="title" type="text" placeholder="タイトル（必須）" required />
+            <select id="category" name="category">
+              <option value="筋トレ">筋トレ</option>
+              <option value="英語">英語</option>
+              <option value="勉強">勉強</option>
+              <option value="仕事">仕事</option>
+              <option value="思考">思考</option>
+            </select>
+            <select id="difficulty" name="difficulty">
+              <option value="EASY">EASY</option>
+              <option value="HARD">HARD</option>
+              <option value="EXTREME">EXTREME</option>
+            </select>
+            <input id="dueDate" name="dueDate" type="date" />
+            <button id="submit-btn" type="submit">追加</button>
+            <button id="cancel-edit" type="button" class="ghost" hidden>編集キャンセル</button>
+          </form>
+        </section>
+
+        <section>
+          <div class="list-head">
+            <h2>タスク一覧</h2>
+            <button id="boss-battle" type="button">月末ボス戦</button>
+          </div>
+          <ul id="task-list" class="task-list"></ul>
+        </section>
+      </main>
+
+      <aside class="panel stats-panel">
+        <h2>ステータス</h2>
+        <dl class="stats-grid" id="stats-grid"></dl>
+
+        <div class="meter-wrap">
+          <label>覚醒ゲージ</label>
+          <div class="meter"><div id="awakening-bar" class="meter-fill awakening"></div></div>
+        </div>
+        <div class="meter-wrap">
+          <label>闇ゲージ</label>
+          <div class="meter"><div id="dark-bar" class="meter-fill dark"></div></div>
+        </div>
+
+        <p id="boss-result" class="boss-result">ボス戦の準備はできているか？</p>
+      </aside>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

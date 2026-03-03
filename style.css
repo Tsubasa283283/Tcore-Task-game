@@ -1,0 +1,71 @@
+:root {
+  --bg: #0e0f18;
+  --panel: #191c2a;
+  --text: #f2f4ff;
+  --accent: #6ee7b7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #1c2340, var(--bg) 60%);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.wrap {
+  width: min(92vw, 760px);
+  padding: 20px;
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--panel) 88%, black);
+  border: 1px solid #2b3150;
+  box-shadow: 0 20px 40px #00000080;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.help {
+  margin: 0 0 14px;
+  opacity: 0.8;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+button {
+  border: 0;
+  background: var(--accent);
+  color: #06271f;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #0a1222;
+  border: 1px solid #283351;
+  border-radius: 10px;
+}
+
+.status {
+  margin: 10px 0 0;
+  min-height: 1.2rem;
+  color: var(--accent);
+}
